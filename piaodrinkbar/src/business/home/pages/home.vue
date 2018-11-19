@@ -1,22 +1,12 @@
 <template>
-	<el-container style="height: 500px; border: 1px solid #eee">
+	<div id="piaoMenu">
+		<el-container style="height: 500px; border: 1px solid #eee">
 		<el-header>
+			{{ header }}
 			<el-menu mode="horizontal">
-				<el-menu-item index="0">首页</el-menu-item>
-				<el-submenu index="1">
-					<template slot="title">菜品介绍</template>
-					<el-menu-item index="1-0">啤酒下酒菜</el-menu-item>
-					<el-menu-item index="1-1">红酒下酒菜</el-menu-item>	
-					<el-menu-item index="1-2">韩式家常菜</el-menu-item>
-				</el-submenu>
-				<el-submenu index="2">
-					<template slot="title">酒类介绍</template>
-					<el-menu-item index="2-0">啤酒</el-menu-item>
-					<el-menu-item index="2-1">红酒</el-menu-item>	
-					<el-menu-item index="2-2">烧酒</el-menu-item>
-				</el-submenu>
-				<el-menu-item index="3">休闲游记</el-menu-item>
-				<el-menu-item index="4">关于</el-menu-item>
+				<el-menu-item v-for="menu in menuList">
+					{{ menu.menuTitle }}
+				</el-menu-item>
 			</el-menu>
 		</el-header>
 		<el-main>
@@ -26,16 +16,65 @@
 			{{ footer }}
 		</el-footer>
 	</el-container>
+	</div>
 </template>
 
 <script>
 
 export default {
-	name:'Home',
 	data() {
 	    return {
+	    	header: 'head area',
 	    	mains: 'main area',
-	    	footer: 'footer area'
+	    	footer: 'footer area',
+	    	menuList: [
+						{
+							menuTitle:"首页",
+							subMenu:[]
+						},
+						{
+							menuTitle:"菜品介绍",
+							subMenu:[
+								{
+									menuTitle:"啤酒下酒菜",
+									subMenu:[]
+								},
+								{
+									menuTitle:"红酒下酒菜",
+									subMenu:[]
+								},
+								{
+									menuTitle:"韩式家常菜",
+									subMenu:[]
+								}
+							]
+						},
+						{
+							menuTitle:"酒类介绍",
+							subMenu:[
+								{
+									menuTitle:"啤酒",
+									subMenu:[]
+								},
+								{
+									menuTitle:"红酒",
+									subMenu:[]
+								},
+								{
+									menuTitle:"韩式烧酒",
+									subMenu:[]
+								}
+							]
+						},
+						{
+							menuTitle:"休闲游记",
+							subMenu:[]
+						},
+						{
+							menuTitle:"关于",
+							subMenu:[]
+						}
+					]
 	    }
     
   	}

@@ -1,57 +1,3 @@
-let homeMenu = {
-	"menuName":"首页",
-	"parentMenu":""
-}
-
-let eatMenu = {
-	"menuName":"菜品介绍",
-	"parentMenu":""
-}
-
-let beerEatMenu = {
-	"menuName":"啤酒下酒菜",
-	"parentMenu":eatMenu
-}
-let wineEatMenu = {
-	"menuName":"红酒下酒菜",
-	"parentMenu":eatMenu
-}
-let normalEatMenu = {
-	"menuName":"韩式家常菜",
-	"parentMenu":eatMenu
-}
-
-let drinkMenu = {
-	"menuName":"酒类介绍",
-	"parentMenu":""
-}
-let normalEatMenu = {
-	"menuName":"红酒",
-	"parentMenu":drinkMenu
-}
-let normalEatMenu = {
-	"menuName":"啤酒",
-	"parentMenu":drinkMenu
-}
-
-let travelMenu = {
-	"menuName":"休闲游记",
-	"parentMenu":""
-}
-
-let aboutMenu = {
-	"menuName":"关于",
-	"parentMenu":""
-}
-
-let menuBar = [
-	homeMenu,
-	eatMenu,
-	drinkMenu,
-	travelMenu,
-	aboutMenu
-]
-
 let newsList = ['标题标题0', 
 				'标题标题1', 
 				'标题标题2', 
@@ -61,3 +7,52 @@ let newsList = ['标题标题0',
 				'标题标题6', 
 				'标题标题7',
 				'标题标题8']
+
+let menu = [
+	{
+		menuTitle:"首页",
+		subMenu:[]
+	},
+	{
+		menuTitle:"菜品介绍",
+		subMenu:[
+			{
+				menuTitle:"啤酒下酒菜"
+				subMenu:[]
+			},
+			{
+				menuTitle:"红酒下酒菜"
+				subMenu:[]
+			},
+			{
+				menuTitle:"韩式家常菜"
+				subMenu:[]
+			}
+		]
+	},
+	{
+		menuTitle:"酒类介绍",
+		subMenu:[
+			{
+				menuTitle:"啤酒"
+				subMenu:[]
+			},
+			{
+				menuTitle:"红酒"
+				subMenu:[]
+			},
+			{
+				menuTitle:"韩式烧酒"
+				subMenu:[]
+			}
+		]
+	},
+	{
+		menuTitle:"休闲游记",
+		subMenu:[]
+	},
+	{
+		menuTitle:"关于",
+		subMenu:[]
+	}
+]
