@@ -70,3 +70,12 @@ let menu = [
 					subMenu:[]
 				}
 			]
+
+let adList= [
+			{adTitle:"广告0", adUrl:"https://mmbiz.qpic.cn/mmbiz_jpg/BDxPBUfXwJrOM1HJpLZ19MVKBkrBNbObg4pe6WOSan8NpDWEEQtZnhZ5juxa37VP2u6ZppsTCtVGrCnmXdU48w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"},
+			{adTitle:"广告1", adUrl:"https://mmbiz.qpic.cn/mmbiz_jpg/BDxPBUfXwJrOM1HJpLZ19MVKBkrBNbObSnftqCHmaDLx5ZBJOZpGicpiaUsXn8DyxgV3c9FsMXibmUichj1HUNCqoA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"},
+			{adTitle:"广告2", adUrl:"https://mmbiz.qpic.cn/mmbiz_jpg/BDxPBUfXwJozdt6YOxbX7uyxoaXUNuiaZxlDrpHxYcqHczWbcJ6461adX5pOMiavHtCqMOckKnmv1SCZ5oicCwS6Q/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"},
+			{adTitle:"广告3", adUrl:"https://mmbiz.qpic.cn/mmbiz_jpg/BDxPBUfXwJozdt6YOxbX7uyxoaXUNuiaZxlDrpHxYcqHczWbcJ6461adX5pOMiavHtCqMOckKnmv1SCZ5oicCwS6Q/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"},
+			{adTitle:"广告4", adUrl:"https://mmbiz.qpic.cn/mmbiz_jpg/BDxPBUfXwJrOM1HJpLZ19MVKBkrBNbObSnftqCHmaDLx5ZBJOZpGicpiaUsXn8DyxgV3c9FsMXibmUichj1HUNCqoA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"},
+			{adTitle:"广告5", adUrl:"https://mmbiz.qpic.cn/mmbiz_jpg/BDxPBUfXwJrOM1HJpLZ19MVKBkrBNbObg4pe6WOSan8NpDWEEQtZnhZ5juxa37VP2u6ZppsTCtVGrCnmXdU48w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"}
+		]
