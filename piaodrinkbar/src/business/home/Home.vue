@@ -2,9 +2,15 @@
     <el-container>
         <el-header>
             <el-menu mode="horizontal">
-                <el-menu-item v-for="menu in menuList" :index="menu.menuIndex" :key="menu.menuIndex">
+                <el-menu-item v-for="menu in menuList" :index="menu.menuIndex" :key="menu.menuIndex" v-if="menu.subMenuList.length == 0">
                     {{ menu.menuTitle }}
                 </el-menu-item>
+                <el-submenu :index="menu.menuIndex" v-else>
+                    <template slot="title">{{ menu.menuTitle }}</template>
+                    <el-menu-item v-for="subMenu in menu.subMenuList" :index="menu.menuIndex + '-' + subMenu.menuIndex" :key="menu.menuIndex + '-' + subMenu.menuIndex">
+                        {{ subMenu.menuTitle }}
+                    </el-menu-item>
+                </el-submenu>
             </el-menu>
         </el-header>
         <el-main>main</el-main>
@@ -20,15 +26,15 @@ export default {
             menuList:[
 				{
 					menuTitle:"首页",
-					hasSubMenu: false,
+					hasSubMenu: "false",
 					menuIndex: "0",
-					subMenu:[]
+					subMenuList:[]
 				},
 				{
 					menuTitle:"菜品介绍",
-					hasSubMenu: true,
+					hasSubMenu: "true",
 					menuIndex: "1",
-					subMenu:[
+					subMenuList:[
 						{
 							menuTitle:"啤酒下酒菜",
 							menuIndex: "0",
@@ -48,9 +54,9 @@ export default {
 				},
 				{
 					menuTitle:"酒类介绍",
-					hasSubMenu: true,
+					hasSubMenu: "true",
 					menuIndex: "2",
-					subMenu:[
+					subMenuList:[
 						{
 							menuTitle:"啤酒",
 							menuIndex: "0",
@@ -70,15 +76,15 @@ export default {
 				},
 				{
 					menuTitle:"休闲游记",
-					hasSubMenu: false,
+					hasSubMenu: "false",
 					menuIndex: "3",
-					subMenu:[]
+					subMenuList:[]
 				},
 				{
 					menuTitle:"关于",
-					hasSubMenu: false,
+					hasSubMenu: "false",
 					menuIndex: "4",
-					subMenu:[]
+					subMenuList:[]
 				}
 			]
         }
